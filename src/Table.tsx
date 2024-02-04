@@ -8,7 +8,7 @@ import { TableInfo } from "./TableInfo/TableInfo";
 import { TableLength } from "./TableLength/TableLength";
 import { TablePaginate } from "./TablePaginate/TablePaginate";
 //minimals styles
-import "./table.css";
+import "./style.css";
 //functions
 import { sortAndFilter } from "./tableFunction";
 //types

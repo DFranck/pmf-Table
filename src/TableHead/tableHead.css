@@ -12,12 +12,12 @@
 }
 
 .pmf-tableHead-cell-sorting {
-  background-image: url("../img/sort_both.png");
+  background-image: url("img/sort_both.png");
 }
 
 .pmf-tableHead-cell-sorting-asc {
-  background-image: url("../img/sort_asc.png");
+  background-image: url("./img/sort_asc.png");
 }
 .pmf-tableHead-cell-sorting-desc {
-  background-image: url("../img/sort_desc.png");
+  background-image: url("./img/sort_desc.png");
 }
