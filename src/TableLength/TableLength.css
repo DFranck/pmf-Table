@@ -1,0 +1,11 @@
+/*************/
+/*TableLength*/
+/*************/
+.pmf-tableLength-label {
+  margin-top: 1rem;
+  margin-bottom: 10px;
+}
+
+#pmf-tableLength-select {
+  margin: 0 5px;
+}

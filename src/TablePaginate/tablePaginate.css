@@ -1,0 +1,33 @@
+.pmf-tablePaginate button {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+}
+
+.pmf-tablePaginate-button {
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 2px;
+  margin: 0 2px;
+  border: 1px solid transparent;
+  background: transparent;
+}
+
+.pmf-tablePaginate-button:hover {
+  background: linear-gradient(to bottom, #565656 0%, #212121 100%);
+  color: white;
+  border: 1px solid #0b0b0b;
+}
+
+.pmf-tablePaginate-button-active {
+  border-radius: 2px;
+  padding: 0.5em 1em;
+  border: 1px solid #979797;
+  background: linear-gradient(to bottom, #fff 0%, #dcdcdc 100%);
+}
+
+.pmf-tablePaginate-button-disabled {
+  margin: 0 2px;
+  border: 1px solid transparent;
+  background: transparent;
+  padding: 0.5em 1em;
+}
