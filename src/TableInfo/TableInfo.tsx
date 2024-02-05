@@ -24,7 +24,7 @@ export const TableInfo = ({
   if (totalLength === 0) firstNumber = 0;
   return (
     <p>
-      Showing {firstNumber} to
+      Showing {firstNumber} to{" "}
       {secondNumber < totalLength ? secondNumber : totalLength} of {totalLength}{" "}
       entries{" "}
       {totalDataLength > totalLength && (
