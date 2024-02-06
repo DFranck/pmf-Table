@@ -19,7 +19,9 @@ export const TableBody = ({
   );
   const columnKeys = Object.keys(displayedData[0] || {});
   const sortedColumnIndex = columnKeys.indexOf(sortedColumn);
-  const columnCount = Object.keys(tableHeadContents[0] || {}).length;
+  const columnCount =
+    tableHeadContents?.length || Object.keys(tableHeadContents[0] || {}).length;
+
   return (
     <tbody className="pmf-tableBody">
       {dataPage.length > 0 ? (
