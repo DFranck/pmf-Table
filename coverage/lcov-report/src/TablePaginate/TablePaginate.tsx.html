@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/TableInfo/TableInfo.tsx</title>
+    <title>Code coverage report for src/TablePaginate/TablePaginate.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/TableInfo</a> TableInfo.tsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/TablePaginate</a> TablePaginate.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>12/12</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/10</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
@@ -98,7 +98,13 @@
 <a name='L33'></a><a href='#L33'>33</a>
 <a name='L34'></a><a href='#L34'>34</a>
 <a name='L35'></a><a href='#L35'>35</a>
-<a name='L36'></a><a href='#L36'>36</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -112,60 +118,72 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { dataType } from "../Types/dataType";
-import "./tableInfo.css";
-export const TableInfo = ({
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { changePage, creatPageLinks } from "../tableFunction";
+import "./tablePaginate.css";
+export const TablePaginate = ({
   displayLength,
   totalLength,
+  setPageNumber,
   pageNumber,
-  data,
 }: {
   displayLength: number;
   totalLength: number;
+  setPageNumber: (num: number | ((currentPage: number) =&gt; number)) =&gt; void;
   pageNumber: number;
-  data: dataType;
 }) =&gt; {
-  const totalDataLength = data.length;
-  let firstNumber;
-  let secondNumber;
-  if (pageNumber === 1) {
-    firstNumber = 1;
-    secondNumber = displayLength;
-  } else {
-    firstNumber = (pageNumber - 1) * displayLength + 1;
-    secondNumber = firstNumber + displayLength - 1;
-  }
-  if (totalLength === 0) firstNumber = 0;
+  const numberOfPage = Math.ceil(totalLength / displayLength);
+  const links = creatPageLinks(numberOfPage, setPageNumber, pageNumber);
   return (
-    &lt;p&gt;
-      Showing {firstNumber} to{" "}
-      {secondNumber &lt; totalLength ? secondNumber : totalLength} of {totalLength}{" "}
-      entries{" "}
-      {totalDataLength &gt; totalLength &amp;&amp; (
-        &lt;span&gt;(filtered from {totalDataLength} total entries)&lt;/span&gt;
-      )}
-    &lt;/p&gt;
+    &lt;nav className=" pmf-tablePaginate"&gt;
+      &lt;button
+        className={
+          pageNumber === 1
+            ? "pmf-tablePaginate-button-disabled pmf-tablePaginate-button-previous"
+            : "pmf-tablePaginate-button pmf-tablePaginate-button-previous"
+        }
+        onClick={(e) =&gt; changePage(e, setPageNumber, numberOfPage)}
+      &gt;
+        Previous
+      &lt;/button&gt;
+      &lt;span&gt;{links}&lt;/span&gt;
+      &lt;button
+        className={
+          pageNumber === numberOfPage
+            ? "pmf-tablePaginate-button-disabled pmf-tablePaginate-button-next"
+            : "pmf-tablePaginate-button pmf-tablePaginate-button-next"
+        }
+        onClick={(e) =&gt; changePage(e, setPageNumber, numberOfPage)}
+      &gt;
+        Next
+      &lt;/button&gt;
+    &lt;/nav&gt;
   );
 };
 &nbsp;</pre></td></tr></table></pre>
@@ -175,7 +193,7 @@ export const TableInfo = ({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-02-07T08:33:20.826Z
+                at 2024-02-07T13:02:52.084Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
