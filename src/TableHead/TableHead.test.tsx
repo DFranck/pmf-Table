@@ -5,7 +5,7 @@ describe("TableHead Render Gracefully", () => {
   it("should render correctly thead cells", async () => {
     const setSortedColumn = jest.fn();
     const setSortDirection = jest.fn();
-    const { rerender } = render(
+    render(
       <table>
         <TableHead
           sortDirection={"pmf-tableHead-cell-sorting-asc"}
@@ -24,7 +24,22 @@ describe("TableHead Render Gracefully", () => {
     expect(column[0]).toHaveClass("pmf-tableHead-cell-sorting-asc");
     expect(column[1]).toHaveClass("pmf-tableHead-cell-sorting");
     expect(column[2]).toHaveClass("pmf-tableHead-cell-sorting");
-
+  });
+  it("should re-render correctly thead cells after click", async () => {
+    const setSortedColumn = jest.fn();
+    const setSortDirection = jest.fn();
+    const { rerender } = render(
+      <table>
+        <TableHead
+          sortDirection={"pmf-tableHead-cell-sorting-asc"}
+          sortedColumn={"column1"}
+          setSortedColumn={setSortedColumn}
+          setSortDirection={setSortDirection}
+          tableHeadContents={["column1", "column2", "column3"]}
+        />
+      </table>
+    );
+    const column = screen.getAllByRole("columnheader");
     fireEvent.click(column[1]);
     await waitFor(() => {
       expect(setSortDirection).toHaveBeenCalledWith(
