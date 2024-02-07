@@ -4,6 +4,10 @@ module.exports = {
   transform: {
     "^.+\\.tsx?$": "ts-jest",
   },
+  moduleNameMapper: {
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+  },
+  transformIgnorePatterns: ["/node_modules/", "\\.pnp\\.[^\\/]+$"],
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["@testing-library/jest-dom/"],
 };

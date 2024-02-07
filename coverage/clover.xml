@@ -1,22 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1707228223679" clover="3.2.0">
-  <project timestamp="1707228223680" name="All files">
-    <metrics statements="10" coveredstatements="10" conditionals="7" coveredconditionals="7" methods="1" coveredmethods="1" elements="18" coveredelements="18" complexity="0" loc="10" ncloc="10" packages="1" files="2" classes="2"/>
-    <file name="TableInfo.tsx" path="C:\Users\overb\OneDrive\Documents\Franck\Pro\Projets\Projets Dev\HRnet\pmf-table\src\TableInfo\TableInfo.tsx">
-      <metrics statements="10" coveredstatements="10" conditionals="7" coveredconditionals="7" methods="1" coveredmethods="1"/>
-      <line num="2" count="1" type="stmt"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="14" count="3" type="stmt"/>
-      <line num="17" count="3" type="cond" truecount="2" falsecount="0"/>
-      <line num="18" count="1" type="stmt"/>
-      <line num="19" count="1" type="stmt"/>
-      <line num="21" count="2" type="stmt"/>
-      <line num="22" count="2" type="stmt"/>
-      <line num="24" count="3" type="cond" truecount="1" falsecount="0"/>
-      <line num="25" count="3" type="stmt"/>
-    </file>
-    <file name="tableInfo.css" path="C:\Users\overb\OneDrive\Documents\Franck\Pro\Projets\Projets Dev\HRnet\pmf-table\src\TableInfo\tableInfo.css">
-      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-    </file>
+<coverage generated="1707290261195" clover="3.2.0">
+  <project timestamp="1707290261195" name="All files">
+    <metrics statements="48" coveredstatements="21" conditionals="19" coveredconditionals="5" methods="15" coveredmethods="4" elements="82" coveredelements="30" complexity="0" loc="48" ncloc="48" packages="2" files="2" classes="2"/>
+    <package name="src">
+      <metrics statements="42" coveredstatements="15" conditionals="17" coveredconditionals="3" methods="12" coveredmethods="1"/>
+      <file name="tableFunction.tsx" path="C:\Users\overb\OneDrive\Documents\Franck\Pro\Projets\Projets Dev\HRnet\pmf-table\src\tableFunction.tsx">
+        <metrics statements="42" coveredstatements="15" conditionals="17" coveredconditionals="3" methods="12" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="43" count="3" type="stmt"/>
+        <line num="44" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="87" count="1" type="stmt"/>
+        <line num="92" count="0" type="stmt"/>
+        <line num="93" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="95" count="0" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="98" count="0" type="stmt"/>
+        <line num="99" count="0" type="stmt"/>
+        <line num="101" count="0" type="stmt"/>
+        <line num="103" count="0" type="cond" truecount="0" falsecount="1"/>
+      </file>
+    </package>
+    <package name="src.TableHead">
+      <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <file name="TableHead.tsx" path="C:\Users\overb\OneDrive\Documents\Franck\Pro\Projets\Projets Dev\HRnet\pmf-table\src\TableHead\TableHead.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="20" count="9" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
