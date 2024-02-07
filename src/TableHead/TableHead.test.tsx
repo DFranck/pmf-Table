@@ -2,7 +2,7 @@ import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { TableHead } from "./TableHead";
 
 describe("TableHead Render Gracefully", () => {
-  it("should render correctly thead cells", async () => {
+  it("should init correctly thead cells", async () => {
     const setSortedColumn = jest.fn();
     const setSortDirection = jest.fn();
     render(
@@ -29,15 +29,13 @@ describe("TableHead Render Gracefully", () => {
     const setSortedColumn = jest.fn();
     const setSortDirection = jest.fn();
     const { rerender } = render(
-      <table>
-        <TableHead
-          sortDirection={"pmf-tableHead-cell-sorting-asc"}
-          sortedColumn={"column1"}
-          setSortedColumn={setSortedColumn}
-          setSortDirection={setSortDirection}
-          tableHeadContents={["column1", "column2", "column3"]}
-        />
-      </table>
+      <TableHead
+        sortDirection={"pmf-tableHead-cell-sorting-asc"}
+        sortedColumn={"column1"}
+        setSortedColumn={setSortedColumn}
+        setSortDirection={setSortDirection}
+        tableHeadContents={["column1", "column2", "column3"]}
+      />
     );
     const column = screen.getAllByRole("columnheader");
     fireEvent.click(column[1]);
@@ -49,15 +47,13 @@ describe("TableHead Render Gracefully", () => {
     });
 
     rerender(
-      <table>
-        <TableHead
-          sortDirection={"pmf-tableHead-cell-sorting-asc"}
-          sortedColumn={"column2"}
-          setSortedColumn={setSortedColumn}
-          setSortDirection={setSortDirection}
-          tableHeadContents={["column1", "column2", "column3"]}
-        />
-      </table>
+      <TableHead
+        sortDirection={"pmf-tableHead-cell-sorting-asc"}
+        sortedColumn={"column2"}
+        setSortedColumn={setSortedColumn}
+        setSortDirection={setSortDirection}
+        tableHeadContents={["column1", "column2", "column3"]}
+      />
     );
 
     fireEvent.click(column[1]);
@@ -69,15 +65,13 @@ describe("TableHead Render Gracefully", () => {
     });
 
     rerender(
-      <table>
-        <TableHead
-          sortDirection={"pmf-tableHead-cell-sorting-desc"}
-          sortedColumn={"column2"}
-          setSortedColumn={setSortedColumn}
-          setSortDirection={setSortDirection}
-          tableHeadContents={["column1", "column2", "column3"]}
-        />
-      </table>
+      <TableHead
+        sortDirection={"pmf-tableHead-cell-sorting-desc"}
+        sortedColumn={"column2"}
+        setSortedColumn={setSortedColumn}
+        setSortDirection={setSortDirection}
+        tableHeadContents={["column1", "column2", "column3"]}
+      />
     );
 
     fireEvent.click(column[1]);
