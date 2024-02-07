@@ -13,8 +13,8 @@ describe("Table component", () => {
     const tableHeaders = screen.getAllByRole("columnheader");
     const tableRows = screen.getAllByRole("row");
 
-    expect(tableHeaders).toHaveLength(3); // Assuming 3 columns: id, name, age
-    expect(tableRows).toHaveLength(4); // Header row + 3 data rows
+    expect(tableHeaders).toHaveLength(3);
+    expect(tableRows).toHaveLength(4);
   });
 
   it("renders 'no data' message when data prop is empty", () => {
