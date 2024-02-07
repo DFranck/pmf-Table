@@ -23,44 +23,47 @@ export const TableBody = ({
     tableHeadContents?.length || Object.keys(tableHeadContents[0] || {}).length;
 
   return (
-    <tbody className="pmf-tableBody">
-      {dataPage.length > 0 ? (
-        dataPage.map((row, rowIndex) => (
-          <tr
-            role="row"
-            key={`${row} + ${rowIndex}`}
-            className={
-              rowIndex % 2 === 0
-                ? "pmf-tableBody-row-odd"
-                : "pmf-tableBody-row-even"
-            }
-          >
-            {Object.values(row).map((cell, cellIndex) => (
-              <td
-                key={`${cell} + ${cellIndex}`}
-                className={
-                  cellIndex === sortedColumnIndex
-                    ? rowIndex % 2 === 0
-                      ? "pmf-tableBody-cell pmf-tableBody-cell-sorting-odd"
-                      : "pmf-tableBody-cell pmf-tableBody-cell-sorting-even"
-                    : "pmf-tableBody-cell"
-                }
-              >
-                {cell}
-              </td>
-            ))}
+    <>
+      <tbody className="pmf-tableBody">
+        {dataPage.length > 0 ? (
+          dataPage.map((row, rowIndex) => (
+            <tr
+              role="row"
+              key={`${row} + ${rowIndex}`}
+              className={
+                rowIndex % 2 === 0
+                  ? "pmf-tableBody-row-odd"
+                  : "pmf-tableBody-row-even"
+              }
+            >
+              {Object.values(row).map((cell, cellIndex) => (
+                <td
+                  key={`${cell} + ${cellIndex}`}
+                  className={
+                    cellIndex === sortedColumnIndex
+                      ? rowIndex % 2 === 0
+                        ? "pmf-tableBody-cell pmf-tableBody-cell-sorting-odd"
+                        : "pmf-tableBody-cell pmf-tableBody-cell-sorting-even"
+                      : "pmf-tableBody-cell"
+                  }
+                >
+                  {cell}
+                </td>
+              ))}
+            </tr>
+          ))
+        ) : (
+          <tr role="row">
+            <td
+              colSpan={columnCount}
+              className="pmf-tableBody-cell pmf-tableBody-cell-noData"
+              data-testid="column-count"
+            >
+              No matching records found
+            </td>
           </tr>
-        ))
-      ) : (
-        <tr role="row">
-          <td
-            colSpan={columnCount}
-            className="pmf-tableBody-cell pmf-tableBody-cell-noData"
-          >
-            No matching records found
-          </td>
-        </tr>
-      )}
-    </tbody>
+        )}
+      </tbody>
+    </>
   );
 };
