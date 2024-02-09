@@ -20,13 +20,27 @@ export const sortAndFilter = (
     });
   };
   const sort = (sortedColumn: string, sortDirection: string) => {
+    const parseDate = (dateString: string): Date => {
+      const parts = dateString.split("/");
+      const day = parseInt(parts[0], 10);
+      const month = parseInt(parts[1], 10);
+      const year = parseInt(parts[2], 10);
+      return new Date(year, month - 1, day);
+    };
+
     const sortedDirection =
       sortDirection === "pmf-tableHead-cell-sorting-asc" ? 1 : -1;
     sortedData = [...filtredData].sort((a, b) => {
-      if (a[sortedColumn] === b[sortedColumn]) return 0;
-      return a[sortedColumn] > b[sortedColumn]
-        ? sortedDirection
-        : -sortedDirection;
+      if (sortedColumn === "dateOfBirth" || sortedColumn === "startDate") {
+        const dateA = parseDate(String(a[sortedColumn]));
+        const dateB = parseDate(String(b[sortedColumn]));
+        return dateA > dateB ? sortedDirection : -sortedDirection;
+      } else {
+        if (a[sortedColumn] === b[sortedColumn]) return 0;
+        return a[sortedColumn] > b[sortedColumn]
+          ? sortedDirection
+          : -sortedDirection;
+      }
     });
   };
   inputValue ? filter(data, inputValue) : (filtredData = data);
