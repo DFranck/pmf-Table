@@ -18,7 +18,7 @@ export default function Table({ data }: { data?: dataType }) {
   const [displayLength, setDisplayLength] = useState(10);
   const [displayedData, setDisplayedData] = useState(data ?? []);
   const [sortedColumn, setSortedColumn] = useState(
-    data ? Object.keys(data[0])[0] : ""
+    data && data.length > 0 ? Object.keys(data[0])[0] : ""
   );
   const [sortDirection, setSortDirection] = useState(
     "pmf-tableHead-cell-sorting-asc"
@@ -27,7 +27,7 @@ export default function Table({ data }: { data?: dataType }) {
   const [tableHeadContents, setTableHeadContents] = useState<string[]>([]);
   //useEffect for re-render when user sort or filter the table
   useEffect(() => {
-    if (data) {
+    if (data && data.length > 0) {
       setTableHeadContents(data ? Object.keys(data[0]) : []);
       sortAndFilter(
         data,
@@ -39,7 +39,7 @@ export default function Table({ data }: { data?: dataType }) {
     }
   }, [data, sortDirection, sortedColumn, inputValue]);
 
-  return data ? (
+  return !data || data.length === 0 ? (
     <section className="pmf-tableWrapper">
       <header className="pmf-tableHeader">
         <TableLength setDisplayLength={setDisplayLength} />
@@ -69,7 +69,7 @@ export default function Table({ data }: { data?: dataType }) {
           displayLength={displayLength}
           totalLength={displayedData.length}
           pageNumber={pageNumber}
-          data={data}
+          data={[]}
         />
         <TablePaginate
           displayLength={displayLength}
@@ -109,7 +109,7 @@ export default function Table({ data }: { data?: dataType }) {
           displayLength={displayLength}
           totalLength={displayedData.length}
           pageNumber={pageNumber}
-          data={[]}
+          data={data}
         />
         <TablePaginate
           displayLength={displayLength}
