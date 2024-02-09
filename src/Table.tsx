@@ -80,6 +80,14 @@ export default function Table({ data }: { data?: dataType }) {
       </footer>
     </section>
   ) : (
-    <h1>no data</h1>
+    <section className="pmf-tableWrapper">
+      <header className="pmf-tableHeader">
+        <TableLength setDisplayLength={setDisplayLength} />
+        <TableFilter
+          setInputValue={setInputValue}
+          setPageNumber={setPageNumber}
+        />
+      </header>
+    </section>
   );
 }
