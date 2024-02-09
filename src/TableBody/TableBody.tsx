@@ -52,7 +52,7 @@ export const TableBody = ({
               ))}
             </tr>
           ))
-        ) : (
+        ) : columnCount ? (
           <tr role="row">
             <td
               colSpan={columnCount}
@@ -60,6 +60,16 @@ export const TableBody = ({
               data-testid="column-count"
             >
               No matching records found
+            </td>
+          </tr>
+        ) : (
+          <tr role="row">
+            <td
+              colSpan={columnCount}
+              className="pmf-tableBody-cell pmf-tableBody-cell-noData"
+              data-testid="column-count"
+            >
+              No data available in table
             </td>
           </tr>
         )}

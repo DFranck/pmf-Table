@@ -19,7 +19,7 @@ describe("Table component", () => {
 
   it("renders 'no data' message when data prop is empty", () => {
     render(<Table />);
-    const noDataMessage = screen.getByText("no data");
+    const noDataMessage = screen.getByText("No data available in table");
     expect(noDataMessage).toBeInTheDocument();
   });
 });

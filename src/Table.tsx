@@ -88,6 +88,36 @@ export default function Table({ data }: { data?: dataType }) {
           setPageNumber={setPageNumber}
         />
       </header>
+      <table className="pmf-table">
+        <TableHead
+          tableHeadContents={tableHeadContents}
+          sortedColumn={sortedColumn}
+          setSortedColumn={setSortedColumn}
+          sortDirection={sortDirection}
+          setSortDirection={setSortDirection}
+        />
+        <TableBody
+          displayedData={displayedData}
+          displayLength={displayLength}
+          pageNumber={pageNumber}
+          sortedColumn={sortedColumn}
+          tableHeadContents={tableHeadContents}
+        />
+      </table>
+      <footer className="pmf-tableFooter">
+        <TableInfo
+          displayLength={displayLength}
+          totalLength={displayedData.length}
+          pageNumber={pageNumber}
+          data={[]}
+        />
+        <TablePaginate
+          displayLength={displayLength}
+          totalLength={displayedData.length}
+          pageNumber={pageNumber}
+          setPageNumber={setPageNumber}
+        />
+      </footer>
     </section>
   );
 }
