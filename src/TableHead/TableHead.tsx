@@ -13,7 +13,6 @@ export const TableHead = ({
   setSortDirection: (direction: string) => void;
   tableHeadContents: string[];
 }) => {
-  if (!tableHeadContents) tableHeadContents = ["test"];
   return (
     <thead className="pmf-tableHead">
       <tr className="pmf-tableHead-row">
