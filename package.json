@@ -2,9 +2,17 @@
   "name": "pmf-table",
   "main": "dist/pmf-table.js",
   "author": "Dufournet Franck",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "private": false,
   "changelog": [
+    {
+      "version": "0.2.0",
+      "date": "2024-02-13",
+      "source": "https://github.com/DFranck/pmf-table",
+      "changes": [
+        "Modification du build dans 'vite.config.js' pour build depuis l'entrée du composant Table.tsx (le 'main' utilisé avec npm link) et pas l'entrée du projet main.tsx."
+      ]
+    },
     {
       "version": "0.1.9",
       "date": "2024-02-13",
