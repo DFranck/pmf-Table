@@ -26,7 +26,7 @@ les `fonctions` sont executé par les sous-composants mais sont gérées dans un
 Pour utiliser le composant `Table`, passez les données sous forme d'un tableau d'objets à la prop `data` :
 
 ```
-import { Table } from "pmf-table";
+import Table from "pmf-table";
 import "pmf-table/style.css";
 ```
 
