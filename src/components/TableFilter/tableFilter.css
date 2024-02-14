@@ -6,3 +6,11 @@
 #pmf-tableFilter-input {
   margin-left: 0.5em;
 }
+.mobile {
+  display: none;
+}
+@media screen and (max-width: 1090px) {
+  .pmf-tableFilter-label .mobile {
+    display: block;
+  }
+}

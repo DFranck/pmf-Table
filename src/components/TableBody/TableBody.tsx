@@ -39,6 +39,7 @@ export const TableBody = ({
               {Object.values(row).map((cell, cellIndex) => (
                 <td
                   key={`${cell} + ${cellIndex}`}
+                  data-cell={tableHeadContents[cellIndex]}
                   className={
                     cellIndex === sortedColumnIndex
                       ? rowIndex % 2 === 0

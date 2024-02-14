@@ -21,3 +21,10 @@
 .pmf-tableHead-cell-sorting-desc {
   background-image: url("./img/sort_desc.png");
 }
+@media screen and (max-width: 1090px) {
+  th {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+}

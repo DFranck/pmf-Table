@@ -8,7 +8,17 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
+@media screen and (max-width: 1090px) {
+  .pmf-tableBody-cell {
+    max-width: 100%;
+    padding: 0.25em 1em;
+    display: grid;
+    grid-template-columns: 30% auto;
+  }
+  .pmf-tableBody-cell::before {
+    content: attr(data-cell) " : ";
+  }
+}
 .pmf-tableBody-row-odd,
 .pmf-tableBody-cell-sorting-even,
 .pmf-tableBody-cell-noData {
