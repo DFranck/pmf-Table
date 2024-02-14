@@ -19,6 +19,11 @@
     content: attr(data-cell) " : ";
   }
 }
+@media screen and (max-width: 576px) {
+  .pmf-tableBody-cell {
+    grid-template-columns: 40% auto;
+  }
+}
 .pmf-tableBody-row-odd,
 .pmf-tableBody-cell-sorting-even,
 .pmf-tableBody-cell-noData {

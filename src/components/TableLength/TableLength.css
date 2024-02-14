@@ -1,11 +1,30 @@
 /*************/
 /*TableLength*/
 /*************/
-.pmf-tableLength-label {
-  margin-top: 1rem;
-  margin-bottom: 10px;
+
+.pmf-tableLength-select.desktop,
+.pmf-tableLength-select.mobile {
+  margin: 0 1rem;
+  @media screen and (max-width: 576px) {
+    margin: 0;
+  }
+}
+.pmf-tableLength-label.desktop,
+.pmf-tableLength-select.desktop {
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
 }
 
-#pmf-tableLength-select {
-  margin: 0 5px;
+.pmf-tableLength-label.mobile,
+.pmf-tableLength-select.mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @media screen and (max-width: 576px) {
+    position: relative;
+    display: block;
+    width: fit-content;
+  }
 }

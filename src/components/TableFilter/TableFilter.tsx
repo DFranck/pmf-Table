@@ -14,6 +14,7 @@ export const TableFilter = ({
       >
         Search:
         <input
+          className="pmf-tableFilter-input desktop"
           id="pmf-tableFilter-input"
           type="text"
           onChange={(e) => {
@@ -27,6 +28,7 @@ export const TableFilter = ({
         className="pmf-tableFilter-label mobile"
       >
         <input
+          className="pmf-tableFilter-input mobile"
           id="pmf-tableFilter-input"
           type="text"
           placeholder="Search:"

@@ -4,7 +4,9 @@
 .pmf-tableWrapper {
   max-width: 100vw;
 }
-
+.pmf-tableHeader {
+  margin: 10px 0;
+}
 .pmf-tableHeader,
 .pmf-tableFooter {
   width: 100%;
