@@ -13,15 +13,10 @@
     max-width: 100%;
     padding: 0.25em 1em;
     display: grid;
-    grid-template-columns: 30% auto;
+    grid-template-columns: 40% auto;
   }
   .pmf-tableBody-cell::before {
     content: attr(data-cell) " : ";
-  }
-}
-@media screen and (max-width: 576px) {
-  .pmf-tableBody-cell {
-    grid-template-columns: 40% auto;
   }
 }
 .pmf-tableBody-row-odd,

@@ -2,7 +2,7 @@
 /*wrappers*/
 /**********/
 .pmf-tableWrapper {
-  max-width: 100vw;
+  width: 100%;
 }
 .pmf-tableHeader {
   margin: 10px 0;
@@ -15,6 +15,12 @@
   align-items: center;
 }
 
+.pmf-tableFooter {
+  @media screen and (max-width: 1090px) {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+}
 .pmf-table {
   width: 100%;
   border-bottom: 1px solid #111;
