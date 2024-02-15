@@ -1,5 +1,5 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import Table from "./Table";
+import { Table } from "./Table";
 
 describe("Table component", () => {
   let testData = [

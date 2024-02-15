@@ -6,8 +6,14 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: "src/main.tsx",
+        table: "src/main.tsx",
+      },
+      output: {
+        entryFileNames: "pmf-table.js",
       },
     },
+    outDir: "dist",
+    cssCodeSplit: false,
+    assetsDir: "./",
   },
 });

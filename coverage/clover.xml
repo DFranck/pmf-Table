@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1707638926837" clover="3.2.0">
-  <project timestamp="1707638926837" name="All files">
-    <metrics statements="116" coveredstatements="102" conditionals="67" coveredconditionals="57" methods="29" coveredmethods="22" elements="212" coveredelements="181" complexity="0" loc="116" ncloc="116" packages="7" files="8" classes="8"/>
-    <package name="src">
+<coverage generated="1707985544461" clover="3.2.0">
+  <project timestamp="1707985544462" name="All files">
+    <metrics statements="119" coveredstatements="100" conditionals="67" coveredconditionals="57" methods="31" coveredmethods="21" elements="217" coveredelements="178" complexity="0" loc="119" ncloc="119" packages="7" files="8" classes="8"/>
+    <package name="components">
       <metrics statements="74" coveredstatements="60" conditionals="38" coveredconditionals="28" methods="15" coveredmethods="8"/>
-      <file name="Table.tsx" path="C:\Users\overb\OneDrive\Documents\Franck\Pro\Projets\Projets Dev\HRnet\pmf-table\src\Table.tsx">
+      <file name="Table.tsx" path="C:\Users\overb\OneDrive\Documents\Franck\Pro\Projets\Projets Dev\HRnet\pmf-table\src\components\Table.tsx">
         <metrics statements="22" coveredstatements="22" conditionals="15" coveredconditionals="14" methods="2" coveredmethods="2"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -29,7 +29,7 @@
         <line num="32" count="3" type="stmt"/>
         <line num="42" count="7" type="cond" truecount="4" falsecount="0"/>
       </file>
-      <file name="tableFunction.tsx" path="C:\Users\overb\OneDrive\Documents\Franck\Pro\Projets\Projets Dev\HRnet\pmf-table\src\tableFunction.tsx">
+      <file name="tableFunction.tsx" path="C:\Users\overb\OneDrive\Documents\Franck\Pro\Projets\Projets Dev\HRnet\pmf-table\src\components\tableFunction.tsx">
         <metrics statements="52" coveredstatements="38" conditionals="23" coveredconditionals="14" methods="13" coveredmethods="6"/>
         <line num="3" count="3" type="stmt"/>
         <line num="10" count="3" type="stmt"/>
@@ -85,9 +85,9 @@
         <line num="117" count="0" type="cond" truecount="0" falsecount="1"/>
       </file>
     </package>
-    <package name="src.TableBody">
+    <package name="components.TableBody">
       <metrics statements="9" coveredstatements="9" conditionals="16" coveredconditionals="16" methods="3" coveredmethods="3"/>
-      <file name="TableBody.tsx" path="C:\Users\overb\OneDrive\Documents\Franck\Pro\Projets\Projets Dev\HRnet\pmf-table\src\TableBody\TableBody.tsx">
+      <file name="TableBody.tsx" path="C:\Users\overb\OneDrive\Documents\Franck\Pro\Projets\Projets Dev\HRnet\pmf-table\src\components\TableBody\TableBody.tsx">
         <metrics statements="9" coveredstatements="9" conditionals="16" coveredconditionals="16" methods="3" coveredmethods="3"/>
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
@@ -100,20 +100,22 @@
         <line num="40" count="69" type="stmt"/>
       </file>
     </package>
-    <package name="src.TableFilter">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <file name="TableFilter.tsx" path="C:\Users\overb\OneDrive\Documents\Franck\Pro\Projets\Projets Dev\HRnet\pmf-table\src\TableFilter\TableFilter.tsx">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+    <package name="components.TableFilter">
+      <metrics statements="7" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <file name="TableFilter.tsx" path="C:\Users\overb\OneDrive\Documents\Franck\Pro\Projets\Projets Dev\HRnet\pmf-table\src\components\TableFilter\TableFilter.tsx">
+        <metrics statements="7" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="9" count="9" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="src.TableHead">
+    <package name="components.TableHead">
       <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-      <file name="TableHead.tsx" path="C:\Users\overb\OneDrive\Documents\Franck\Pro\Projets\Projets Dev\HRnet\pmf-table\src\TableHead\TableHead.tsx">
+      <file name="TableHead.tsx" path="C:\Users\overb\OneDrive\Documents\Franck\Pro\Projets\Projets Dev\HRnet\pmf-table\src\components\TableHead\TableHead.tsx">
         <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
@@ -123,9 +125,9 @@
         <line num="23" count="3" type="stmt"/>
       </file>
     </package>
-    <package name="src.TableInfo">
+    <package name="components.TableInfo">
       <metrics statements="10" coveredstatements="10" conditionals="7" coveredconditionals="7" methods="1" coveredmethods="1"/>
-      <file name="TableInfo.tsx" path="C:\Users\overb\OneDrive\Documents\Franck\Pro\Projets\Projets Dev\HRnet\pmf-table\src\TableInfo\TableInfo.tsx">
+      <file name="TableInfo.tsx" path="C:\Users\overb\OneDrive\Documents\Franck\Pro\Projets\Projets Dev\HRnet\pmf-table\src\components\TableInfo\TableInfo.tsx">
         <metrics statements="10" coveredstatements="10" conditionals="7" coveredconditionals="7" methods="1" coveredmethods="1"/>
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
@@ -139,19 +141,20 @@
         <line num="25" count="10" type="stmt"/>
       </file>
     </package>
-    <package name="src.TableLength">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <file name="TableLength.tsx" path="C:\Users\overb\OneDrive\Documents\Franck\Pro\Projets\Projets Dev\HRnet\pmf-table\src\TableLength\TableLength.tsx">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+    <package name="components.TableLength">
+      <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+      <file name="TableLength.tsx" path="C:\Users\overb\OneDrive\Documents\Franck\Pro\Projets\Projets Dev\HRnet\pmf-table\src\components\TableLength\TableLength.tsx">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="7" count="9" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="src.TablePaginate">
+    <package name="components.TablePaginate">
       <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
-      <file name="TablePaginate.tsx" path="C:\Users\overb\OneDrive\Documents\Franck\Pro\Projets\Projets Dev\HRnet\pmf-table\src\TablePaginate\TablePaginate.tsx">
+      <file name="TablePaginate.tsx" path="C:\Users\overb\OneDrive\Documents\Franck\Pro\Projets\Projets Dev\HRnet\pmf-table\src\components\TablePaginate\TablePaginate.tsx">
         <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>

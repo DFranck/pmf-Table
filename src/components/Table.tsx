@@ -13,7 +13,7 @@ import "./style.css";
 import { sortAndFilter } from "./tableFunction";
 //types
 import { dataType } from "./Types/dataType";
-export default function Table({ data }: { data?: dataType }) {
+export const Table = ({ data }: { data?: dataType }) => {
   const [pageNumber, setPageNumber] = useState(1);
   const [displayLength, setDisplayLength] = useState(10);
   const [displayedData, setDisplayedData] = useState(data ?? []);
@@ -120,4 +120,4 @@ export default function Table({ data }: { data?: dataType }) {
       </footer>
     </section>
   );
-}
+};
