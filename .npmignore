@@ -1,5 +1,2 @@
 # Exclure tout sauf le dossier dist
 /*
-!dist/
-!package.json
-!README.md

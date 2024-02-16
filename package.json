@@ -1,9 +1,16 @@
 {
   "name": "pmf-table",
-  "main": "dist/pmf-table.es.js",
+  "main": "pmf-table.es.js",
   "author": "Dufournet Franck",
   "version": "0.2.1",
   "private": false,
+  "files": [
+    "README.md",
+    "package.json",
+    "pmf-table.es.js",
+    "pmf-table.umd.js",
+    "style.css"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
