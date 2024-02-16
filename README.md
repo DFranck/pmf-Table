@@ -1,49 +1,60 @@
 # pmf-Table v 0.2.1
 
-render a table with a list of items from props : data={YOURDATA}
-optimize for desktop and users data.
+Render a responsive table with a list of items from props : data={YOURDATA}
+optimised for 5 to 10 different data
 
-## version de node utilisé :
+## version of node used
 
 v18.18.2
 
-## Structure du Composant
+## Component Structure
 
-Le composant `Table` est organisé en plusieurs sous-composants pour une clarté maximale et une réutilisation efficace. Chaque sous-composant a un rôle spécifique dans l'affichage et la gestion des données du tableau. Voici la disposition et la description de chaque sous-composant :
+The `Table` component is organized into several subcomponents for maximum clarity and efficient reuse. Each subcomponent has a specific role in displaying and managing table data. Here is the layout and description of each subcomponent:
 
-- `TableLenght`: Gère le nombre d'éléments à afficher dans le tableau.
-- `TableFilter`: Fournit une fonctionnalité de recherche pour filtrer les données affichées dans le tableau.
-- `table`: Le conteneur principal pour les données du tableau.
-- `TableHead`: Affiche l'en-tête du tableau, avec les titres des colonnes.
-- `TableBody`: Gère l'affichage des données dans le corps du tableau.
-- `TableInfo`: Affiche des informations sur les données actuellement visibles dans le tableau.
-- `TablePaginate`: Offre des contrôles de pagination pour naviguer entre les différentes pages de données.
+### TableWrapper
 
-les `fonctions` sont executé par les sous-composants mais sont gérées dans un fichier dédier pour que les sous-composants se concentre sur le rendu.
+#### TableHeader
 
-## Utilisation du Composant `Table`
+- `TableLenght`: Manages the number of elements to display in the table.
+- `TableFilter`: Provides search functionality to filter the data displayed in the table.
 
-Pour utiliser le composant `Table`, passez les données sous forme d'un tableau d'objets à la prop `data` :
+#### Table
 
-```
+- `TableHead`: Displays the table header with data keys.
+- `TableBody`: Manages the display of data in the table body with data values.
+
+#### TableFooter
+
+- `TableInfo`: Displays information about the data currently visible in the table.
+- `TablePaginate`: Pagination controls to navigate between different pages of data Table.
+
+##### Functions
+
+the `functions` are executed by the sub-components but are managed in a dedicated file so that the sub-components can concentrate on rendering.
+
+## Use of the Component `Table`
+
+To use the `Table` component, pass the data as an array of objects to the `data` prop:
+
+```jsx
 import Table from "pmf-table";
 import "pmf-table/style.css";
 ```
 
-## Commande d'installation
+## Installation command
 
 ```
 npm i pmf-table
 ```
 
-### Props
+### Props details
 
 **data** _(array of objects, **required**)_:
 
-- La prop `data` doit être un **tableau d'objets**, où chaque objet représente une **ligne** dans le tableau.
-- Chaque objet peut avoir des **clés et des valeurs variées**. Les clés représentent les **en-têtes de colonnes** et les valeurs, les **données de chaque cellule**.
+- The `data` prop must be an **array of objects**, where each object represents a **row** in the array.
+- Each object can have **varied keys and values**. The keys represent the **column headers** and the values, the **data of each cell**.
 
-#### Exemple de structure de `data` :
+#### Example of structure of `data` :
 
 ```json
 [
@@ -52,28 +63,19 @@ npm i pmf-table
 ]
 ```
 
-#### Exemple d'utilisation
-
-```
-import { Table } from "pmf-table";
-import "pmf-table/style.css";
-```
+#### Example of use
 
 ```jsx
-<Table data={data} />
+import { Table } from "pmf-table";
+import "pmf-table/style.css";
+<Table data={data} />;
 ```
 
-## Sous-composants de `Table`
+## detail of Subcomponents of `Table`
 
 ### TableLength
 
-Ce sous-composant permet à l'utilisateur de choisir le nombre de lignes à afficher dans le tableau.
-
-#### Props
-
-- `setDisplayLength={setDisplayLength}`: Changement du state lors de la modification du nombre de lignes à afficher.
-
-#### Exemple d'utilisation
+This subcomponent allows the user to choose the number of rows to display in the table.
 
 ```jsx
 <TableLenght setDisplayLength={setDisplayLength} />
@@ -81,74 +83,15 @@ Ce sous-composant permet à l'utilisateur de choisir le nombre de lignes à affi
 
 ### TableFilter
 
-Permet de filtrer les données du tableau en fonction d'une chaîne de recherche.
-
-#### Props
-
-- `setInputValue={setInputValue}`: Changement du state lors de la modification de la chaîne de recherche.
-- `setPageNumber={setPageNumber}`: Changement du state lors de la modification de la chaîne de recherche.
-
-#### Exemple d'utilisation
+Allows you to filter table data based on a search string.
 
 ```jsx
 <TableFilter setInputValue={setInputValue} setPageNumber={setPageNumber} />
 ```
 
-### TableInfo
-
-Affiche des informations sur les données actuellement visibles dans le tableau, telles que le nombre total de lignes et les lignes affichées.
-
-#### Props
-
-- `displayLength={displayLength}`: Nombre de lignes affichées par page.
-- `totalLength={displayedData.length}`: Nombre total de lignes filtrées.
-- `pageNumber={pageNumber}` : Page actuellement sélectionnée.
-- `data={data}`: Pour afficher le nombre total de lignes non filtrées.
-
-#### Exemple d'utilisation
-
-```jsx
-<TableInfo
-  displayLength={displayLength}
-  totalLength={displayedData.length}
-  pageNumber={pageNumber}
-  data={data}
-/>
-```
-
-### TablePaginate
-
-Fournit des contrôles de pagination pour naviguer entre les pages de données du tableau.
-
-#### Props
-
-- `displayLength={displayLength}`: Nombre de lignes affichées par page.
-- `totalLength={displayedData.length}`: Nombre total de data.
-- `pageNumber={pageNumber}`: Page actuellement sélectionnée.
-- `setPageNumber={setPageNumber}`: Permet de changer la Page actuellement sélectionnée.
-
-#### Exemple d'utilisation
-
-```jsx
-<TablePaginate
-  displayLength={displayLength}
-  totalLength={displayedData.length}
-  pageNumber={pageNumber}
-  setPageNumber={setPageNumber}
-/>
-```
-
 ### TableHead
 
-Gère l'affichage des en-têtes de colonnes du tableau et permet le tri des données.
-
-#### Props
-
-- `tableHeadContents={tableHeadContents}`: Un tableau duquel les en-têtes des colonnes du tableau sont extraits.
-- `sortedColumn={sortedColumn} & setSortedColumn={setSortedColumn}`: Permettent de changer selectionner la colonne à trier.
-- `sortDirection={sortDirection} & setSortDirection={setSortDirection}`: Permettent de changer le sens du tri.
-
-#### Exemple d'utilisation
+Manages the display of table column headers and allows data sorting.
 
 ```jsx
 <TableHead
@@ -162,17 +105,7 @@ Gère l'affichage des en-têtes de colonnes du tableau et permet le tri des donn
 
 ### TableBody
 
-Affiche les données du tableau dans le corps du tableau.
-
-#### Props
-
-- `displayedData={displayedData}`: Données à afficher dans le tableau.
-- `displayLength={displayLength}`: Nombre de lignes affichées par page.
-- `pageNumber={pageNumber}`: Page actuellement sélectionnée.
-- `sortedColumn={sortedColumn}`: colonne actuellement triée.
-- `tableHeadContents={tableHeadContents}`: nombre total de colones du tableau.
-
-#### Exemple d'utilisation
+Displays table data in the table body.
 
 ```jsx
 <TableBody
@@ -184,58 +117,54 @@ Affiche les données du tableau dans le corps du tableau.
 />
 ```
 
-## Convention de Nommage des Classes CSS
+### TableInfo
 
-Dans le cadre de ce projet, nous avons adopté une convention de nommage des classes CSS pour assurer la cohérence et minimiser les conflits de styles, en particulier lors de l'intégration de ce composant dans d'autres projets.
+Shows information about the data currently visible in the table, such as the total number of rows and the rows displayed.
 
-### Préfixe des Classes
+```jsx
+<TableInfo
+  displayLength={displayLength}
+  totalLength={displayedData.length}
+  pageNumber={pageNumber}
+  data={data}
+/>
+```
 
-Toutes les classes CSS principales de ce composant sont préfixées avec `pmf-` (abréviation de Polymorf), ce qui permet d'identifier rapidement les classes comme faisant partie de la bibliothèque de composants de table Polymorf.
+### TablePaginate
 
-### Structure des Classes
+Provides pagination controls to navigate between pages of table data.
 
-- **Éléments de Base** : Les classes liées aux éléments de base du composant `Table` suivent le format `pmf-elementName`. Exemple : `pmf-table`, `pmf-tableHead`, `pmf-tableBody`.
+```jsx
+<TablePaginate
+  displayLength={displayLength}
+  totalLength={displayedData.length}
+  pageNumber={pageNumber}
+  setPageNumber={setPageNumber}
+/>
+```
 
-- **Enfants et Sous-éléments** : Les classes des sous-éléments ou des éléments enfants suivent le format `pmf-elementName-childName`. Exemple : `pmf-table-row`, `pmf-table-cell`.
+### Class Prefix
 
-### Exemples
+All main CSS classes in this component are prefixed with `pmf-` (short for Polymorf), which helps quickly identify classes as part of the Polymorf table component library.
 
-Voici quelques exemples de notre convention de nommage des classes :
+### Class Structure
 
-- Table principale : `pmf-table`
-- En-tête de table : `pmf-tableHead`
-- Cellule d'en-tête : `pmf-tableHeadCell`
-- Corps de la table : `pmf-tableBody`
-- Cellule du corps de la table : `pmf-tableCell`
-- Pagination de la table : `pmf-tablePagination`
+- **Basic Elements**: The classes linked to the basic elements of the `Table` component follow the `pmf-elementName` format. Example: `pmf-table`, `pmf-tableHead`, `pmf-tableBody`.
 
-Nous encourageons les contributeurs et les utilisateurs à suivre cette convention lors de l'extension ou de la personnalisation des styles de ce composant.
+- **Children and Subelements**: The classes of subelements or child elements follow the format `pmf-elementName-childName`. Example: `pmf-table-row`, `pmf-table-cell`.
 
-## Fonctions du Composant `Table`
+### Examples
 
-Table gère Tout les states du composant.
-Table utilise un useEffect pour re-render le composant apres chaque changement.
+Here are some examples of our class naming convention:
 
-### Affichage du nombre d'éléments [x]
+- Main table: `pmf-table`
+- Table header: `pmf-tableHead`
+- Header cell: `pmf-tableHeadCell`
+- Table body: `pmf-tableBody`
+- Table body cell: `pmf-tableCell`
+- Table pagination: `pmf-tablePagination`
 
-Le composant `Table` permet à l'utilisateur de sélectionner le nombre d'éléments à afficher dans le tableau. Cette fonction est gérée par le sous-composant `TableLength` qui reçoit un callback pour mettre à jour le nombre d'éléments affichés.
+## Functions of the `Table` Component
 
-### Recherche dans le tableau [x]
-
-Le composant `Table` inclut une fonction de recherche pour filtrer les données affichées. Cette fonction est gérée par le sous-composant `Table` qui utilise un callback pour effectuer et refléter les changements de filtre déclanché par le sous-composant `TableFilter`.
-
-### Tri des colonnes [x]
-
-Le composant `Table` permet le tri des données par colonnes. Les utilisateurs peuvent trier les données en ordre ascendant ou descendant en cliquant sur les en-têtes de colonne, grâce au sous-composant `TableHead`.
-
-### Pagination du tableau [x]
-
-Pour les grands ensembles de données, le composant `Table` offre une fonctionnalité de pagination. Le sous-composant `TablePaginate` gère la navigation entre les pages de données.
-
-### Affichage des informations du tableau [x]
-
-Le sous-composant `TableInfo` affiche des informations sur les données actuellement visibles, telles que le nombre total de lignes et les lignes affichées.
-
-## Mise en œuvre
-
-Ces fonctions sont intégrées dans le composant `Table` à travers ses sous-composants. Chaque sous-composant reçoit les props nécessaires pour gérer son comportement et interagir avec les données passées au composant `Table`. Ceci assure que `Table` est flexible et peut être utilisé dans n'importe quelle application React, avec ou sans Redux.
+Table manages all states of the component.
+Table uses a useEffect to re-render the component after each change.

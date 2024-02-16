@@ -4,54 +4,6 @@
   "author": "Dufournet Franck",
   "version": "0.2.1",
   "private": false,
-  "changelog": [
-    {
-      "version": "0.2.1",
-      "date": "2024-02-13",
-      "source": "https://github.com/DFranck/pmf-table",
-      "changes": [
-        "Modification du build dans 'vite.config.js' pour build une biblioteque (.es.js) et non un app (.js)."
-      ]
-    },
-    {
-      "version": "0.2.0",
-      "date": "2024-02-13",
-      "source": "https://github.com/DFranck/pmf-table",
-      "changes": [
-        "Modification du build dans 'vite.config.js' pour build depuis l'entrée du composant Table.tsx (le 'main' utilisé avec npm link) et pas l'entrée du projet main.tsx."
-      ]
-    },
-    {
-      "version": "0.1.9",
-      "date": "2024-02-13",
-      "source": "https://github.com/DFranck/pmf-table",
-      "changes": [
-        "Correction du chemin d'acces 'main': 'pmf-table.js' par 'main': 'dist/pmf-table.js' ."
-      ]
-    },
-    {
-      "version": "0.1.8",
-      "date": "2024-02-13",
-      "source": "https://github.com/DFranck/pmf-table",
-      "changes": [
-        "Deployement avec npmignore."
-      ]
-    },
-    {
-      "version": "0.1.7",
-      "date": "2024-02-13",
-      "changes": [
-        "Deployement depuis sont porpre Repository (https://github.com/DFranck/pmf-table)."
-      ]
-    },
-    {
-      "version": "0.1.6",
-      "date": "2024-02-10",
-      "changes": [
-        "Version utilisable mais déployer depuis HRnet."
-      ]
-    }
-  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
