@@ -1,3 +1,6 @@
+import sortAscIcon from "img/sort_asc.png";
+import sortBothIcon from "img/sort_both.png";
+import sortDescIcon from "img/sort_desc.png";
 import { setDirectionAndColumn } from "../tableFunction";
 import "./tableHead.css";
 export const TableHead = ({
@@ -22,6 +25,17 @@ export const TableHead = ({
             onClick={(e) =>
               setDirectionAndColumn(cell, e, setSortDirection, setSortedColumn)
             }
+            style={{
+              backgroundImage: `url(${
+                cell === sortedColumn
+                  ? sortDirection === "pmf-tableHead-cell-sorting-asc"
+                    ? sortAscIcon
+                    : sortDirection === "pmf-tableHead-cell-sorting-desc"
+                    ? sortDescIcon
+                    : sortBothIcon
+                  : "none"
+              })`,
+            }}
             className={
               cell === sortedColumn
                 ? sortDirection
