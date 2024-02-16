@@ -1,4 +1,4 @@
-# pmf-Table v 0.1.1
+# pmf-Table v 0.2.1
 
 render a table with a list of items from props : data={YOURDATA}
 optimize for desktop and users data.
@@ -14,8 +14,8 @@ Le composant `Table` est organisé en plusieurs sous-composants pour une clarté
 - `TableLenght`: Gère le nombre d'éléments à afficher dans le tableau.
 - `TableFilter`: Fournit une fonctionnalité de recherche pour filtrer les données affichées dans le tableau.
 - `table`: Le conteneur principal pour les données du tableau.
-  - `TableHead`: Affiche l'en-tête du tableau, avec les titres des colonnes.
-  - `TableBody`: Gère l'affichage des données dans le corps du tableau.
+- `TableHead`: Affiche l'en-tête du tableau, avec les titres des colonnes.
+- `TableBody`: Gère l'affichage des données dans le corps du tableau.
 - `TableInfo`: Affiche des informations sur les données actuellement visibles dans le tableau.
 - `TablePaginate`: Offre des contrôles de pagination pour naviguer entre les différentes pages de données.
 

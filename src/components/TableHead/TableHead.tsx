@@ -1,6 +1,6 @@
-import sortAscIcon from "img/sort_asc.png";
-import sortBothIcon from "img/sort_both.png";
-import sortDescIcon from "img/sort_desc.png";
+import sortAscIcon from "../../../public/img/sort_asc.png";
+import sortBothIcon from "../../../public/img/sort_both.png";
+import sortDescIcon from "../../../public/img/sort_desc.png";
 import { setDirectionAndColumn } from "../tableFunction";
 import "./tableHead.css";
 export const TableHead = ({
@@ -33,7 +33,7 @@ export const TableHead = ({
                     : sortDirection === "pmf-tableHead-cell-sorting-desc"
                     ? sortDescIcon
                     : sortBothIcon
-                  : "none"
+                  : sortBothIcon
               })`,
             }}
             className={

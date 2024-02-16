@@ -2,9 +2,17 @@
   "name": "pmf-table",
   "main": "dist/pmf-table.es.js",
   "author": "Dufournet Franck",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": false,
   "changelog": [
+    {
+      "version": "0.2.1",
+      "date": "2024-02-13",
+      "source": "https://github.com/DFranck/pmf-table",
+      "changes": [
+        "Modification du build dans 'vite.config.js' pour build une biblioteque (.es.js) et non un app (.js)."
+      ]
+    },
     {
       "version": "0.2.0",
       "date": "2024-02-13",
