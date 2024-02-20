@@ -1,6 +1,6 @@
 {
   "name": "pmf-table",
-  "main": "pmf-table.es.js",
+  "main": "src/components/Table.tsx",
   "author": "Dufournet Franck",
   "version": "0.2.1",
   "private": false,

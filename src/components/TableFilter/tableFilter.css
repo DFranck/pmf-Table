@@ -1,21 +1,3 @@
 #pmf-tableFilter-input {
   margin-left: 0.5em;
 }
-.pmf-tableFilter-label.desktop,
-.pmf-tableFilter-input.desktop {
-  @media screen and (max-width: 1090px) {
-    display: none;
-  }
-}
-
-.pmf-tableFilter-label.mobile,
-.pmf-tableFilter-input.mobile {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  @media screen and (max-width: 1090px) {
-    position: relative;
-    display: block;
-  }
-}
