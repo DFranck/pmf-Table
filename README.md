@@ -1,4 +1,4 @@
-# pmf-Table v 0.2.1
+# pmf-Table v 0.2.2
 
 Render a responsive table with a list of items from props : data={YOURDATA}
 optimised for 5 to 10 different data

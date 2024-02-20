@@ -11,4 +11,5 @@ module.exports = {
   transformIgnorePatterns: ["/node_modules/", "\\.pnp\\.[^\\/]+$"],
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["@testing-library/jest-dom/"],
+  coverageReporters: ["json", "lcov", "text", "clover"],
 };
